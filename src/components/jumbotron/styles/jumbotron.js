@@ -32,6 +32,7 @@ export const Pane = styled.div`
     text-align: center;
   }
 `;
+//not sure how tto fix sideline issue
 
 export const Title = styled.h1`
   font-size: 50px;

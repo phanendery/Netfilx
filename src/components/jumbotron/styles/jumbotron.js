@@ -59,6 +59,7 @@ export const Image = styled.img`
   height: auto;
 `;
 
+//you can reference any styled component, and giv specific styling on a certain component
 export const Container = styled.div`
   @media (max-width: 1000px) {
     ${Item}: last-of-type h2 {

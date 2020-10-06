@@ -1,4 +1,13 @@
 import React, { useState, useContext, createContext } from "react";
+import {
+  Container,
+  Frame,
+  Title,
+  Item,
+  Inner,
+  Header,
+  Body,
+} from "./styles/accordion";
 
 const ToggleContext = createContext();
 
@@ -31,10 +40,10 @@ Accordion.Header = function AccordionHeader({ children, ...restProps }) {
   const { toggleShow, setToggleShow } = useContext(ToggleContext);
   return (
     <Header
-      onClick={() => setToggleShow((toggleShow) => !toggleShow)} 
+      onClick={() => setToggleShow((toggleShow) => !toggleShow)}
       //we dont use !toggleShow because sometimes depending on how much state you have, React
       //will batch these, if you set the toggle to false and the user sets it to true but
-      // there is alot of stuff happening like render/state changes react will be like 
+      // there is alot of stuff happening like render/state changes react will be like
       //im going to wait till i have all the variables and state to switch but then the value will be different
       //THIS INSTEAD TAKES THE PREVIOUS state AND DOES THE INVERSE
       {...restProps}
@@ -42,4 +51,9 @@ Accordion.Header = function AccordionHeader({ children, ...restProps }) {
       {children}
     </Header>
   );
+};
+
+Accordion.Body = function AccordionBody({ children, ...restProps }) {
+  const { toggleShow } = useContext(ToggleContext);
+  return toggleShow ? <Body {...restProps}>{children}</Body> : null;
 };

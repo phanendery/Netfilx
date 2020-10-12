@@ -41,11 +41,6 @@ Accordion.Header = function AccordionHeader({ children, ...restProps }) {
   return (
     <Header
       onClick={() => setToggleShow((toggleShow) => !toggleShow)}
-      //we dont use !toggleShow because sometimes depending on how much state you have, React
-      //will batch these, if you set the toggle to false and the user sets it to true but
-      // there is alot of stuff happening like render/state changes react will be like
-      //im going to wait till i have all the variables and state to switch but then the value will be different
-      //THIS INSTEAD TAKES THE PREVIOUS state AND DOES THE INVERSE
       {...restProps}
     >
       {children}

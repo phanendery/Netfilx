@@ -1,7 +1,9 @@
 import styled from "styled-components/macro";
 import { Link as ReactRouterLink } from "react-router-dom";
 
-export const Background = styled.div``;
+export const Background = styled.div`
+display: flex;
+`;
 
 export const Container = styled.div`
   display: flex;

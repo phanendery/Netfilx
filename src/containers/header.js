@@ -2,6 +2,7 @@ import React from "react";
 import { Header } from "../components";
 import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
+//design structure for header?
 
 export function HeaderContainer({ children }) {
   return (

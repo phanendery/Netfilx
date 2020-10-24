@@ -2,7 +2,7 @@ import React from "react";
 import { Header } from "../components";
 import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
-//design structure for header?
+//design structure for ticket
 
 export function HeaderContainer({ children }) {
   return (
@@ -13,7 +13,7 @@ export function HeaderContainer({ children }) {
           <Header.ButtonLink to={ROUTES.SIGN_IN}>Sign in </Header.ButtonLink>
         </Header.Frame>
         {children}
-      </Header>
+      </Header> 
     </div>
   );
 }

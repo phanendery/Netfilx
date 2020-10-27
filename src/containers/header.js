@@ -2,7 +2,6 @@ import React from "react";
 import { Header } from "../components";
 import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
-//design structure for ticket
 
 export function HeaderContainer({ children }) {
   return (

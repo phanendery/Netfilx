@@ -4,11 +4,14 @@ import "normalize.css";
 import App from "./app";
 import { GlobalStyles } from "./global-styles";
 import {firebase} from "./lib/firebase.prob"; //used to seed data
+import { FirebaseContext } from "./context/firebase";
 
 render(
   <>
-    <GlobalStyles />
-    <App />
+    <FirebaseContext.Provider value={{ firebase }}>
+      <GlobalStyles />
+      <App />
+    </FirebaseContext.Provider>
   </>,
   document.getElementById("root")
 );

@@ -4,7 +4,7 @@ import { Home, Browse, Signin, Signup } from "./pages";
 import * as ROUTES from "./constants/routes";
 
 
-//adding routes now
+//changed the routes
 export default function App() {
   return (
     <Router>

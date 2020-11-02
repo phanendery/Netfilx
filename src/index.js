@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import "normalize.css";
 import App from "./app";
 import { GlobalStyles } from "./global-styles";
-import {firebase} from "./lib/firebase.prob"; //used to seed data
+import { firebase } from "./lib/firebase.prob"; //used to seed data
 import { FirebaseContext } from "./context/firebase";
 
 render(
